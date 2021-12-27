@@ -44,7 +44,7 @@ const connectOptions = {
   preferredVideoCodecs: [{ codec: 'VP8', simulcast: true }],
 
   // Capture 720p video @ 24 fps.
-  video: { height: 720, frameRate: 24, width: 1280 }
+  video: false
 };
 
 // For mobile browsers, limit the maximum incoming video bitrate to 2.5 Mbps.
@@ -93,8 +93,12 @@ async function selectAndJoinRoom(error = null) {
     // Add the specified Room name to ConnectOptions.
     connectOptions.name = roomName;
 
-    // Add the specified video device ID to ConnectOptions.
-    connectOptions.video.deviceId = { exact: deviceIds.video };
+    if(connectOptions.video != false)
+    {
+      // Add the specified video device ID to ConnectOptions.
+      connectOptions.video.deviceId = { exact: deviceIds.video };
+    }
+
 
     // Join the Room.
     await joinRoom(token, connectOptions);
@@ -110,7 +114,7 @@ async function selectAndJoinRoom(error = null) {
  * Select your camera.
  */
 async function selectCamera() {
-  if (deviceIds.video === null) {
+  if (deviceIds.video === null && connectOptions.video != false) {
     try {
       deviceIds.video = await selectMedia('video', $selectCameraModal, videoTrack => {
         const $video = $('video', $selectCameraModal);

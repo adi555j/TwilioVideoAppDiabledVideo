@@ -229,8 +229,12 @@ async function joinRoom(token, connectOptions) {
   // Join to the Room with the given AccessToken and ConnectOptions.
   const room = await connect(token, connectOptions);
 
+  if(connectOptions.video != false)
+  {
   // Save the LocalVideoTrack.
-  let localVideoTrack = Array.from(room.localParticipant.videoTracks.values())[0].track;
+    let localVideoTrack = Array.from(room.localParticipant.videoTracks.values())[0].track;
+  }
+
 
   // Make the Room available in the JavaScript console for debugging.
   window.room = room;
