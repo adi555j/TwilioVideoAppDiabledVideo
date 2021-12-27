@@ -1,35 +1,7 @@
-**NEW:** The [Local Video Filter](examples/localvideofilter) example has been updated to use the recently released [Video Processor API](https://github.com/twilio/twilio-video.js/releases/tag/2.13.0) for Chrome.
+I have disabled the video track for testing in machines which do not have camera
 
 # Twilio Video Quickstart for JavaScript
 
-[![OS X/Linus Build Status](https://secure.travis-ci.org/twilio/video-quickstart-js.png?branch=master)](http://travis-ci.org/twilio/video-quickstart-js) [![Windows Build status](https://ci.appveyor.com/api/projects/status/3u69uy9c0lsap3dr?svg=true)](https://ci.appveyor.com/project/markandrus/video-quickstart-js)
-
-_For Twilio Video 1.x Quickstart, go [here](https://github.com/twilio/video-quickstart-js/tree/1.x)._
-
-## Overview
-
-This application should give you a ready-made starting point for writing your
-own video apps with Twilio Video.
-
-![screenshot of chat app](quickstart/public/quickstart.png)
-
-## Setup Requirements
-
-Before we begin, we need to collect all the config values we need to run the application:
-
-- Account SID: Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
-- API Key SID: Used to authenticate - [generate one here](https://www.twilio.com/console/runtime/api-keys).
-- API Key Secret: Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/runtime/api-keys).
-
-### A Note on API Keys
-
-When you generate an API key pair at the URLs above, your API Key Secret will only
-be shown once - make sure to save this in a secure location,
-or possibly your `~/.bash_profile`.
-
-## Setting Up The Application
-
-Create a configuration file for your application:
 
 ```bash
 cp .env.template .env
