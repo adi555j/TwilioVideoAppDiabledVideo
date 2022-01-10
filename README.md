@@ -1,7 +1,7 @@
 I have disabled the video track for testing in machines which do not have camera
 
 
-Setup Requirements
+# Setup Requirements
 Before we begin, we need to collect all the config values we need to run the application:
 
 Account SID: Your primary Twilio account identifier - find this in the console here.
