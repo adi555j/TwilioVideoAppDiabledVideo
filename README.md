@@ -1,5 +1,16 @@
 I have disabled the video track for testing in machines which do not have camera
 
+
+Setup Requirements
+Before we begin, we need to collect all the config values we need to run the application:
+
+Account SID: Your primary Twilio account identifier - find this in the console here.
+API Key SID: Used to authenticate - generate one here.
+API Key Secret: Used to authenticate - just like the above, you'll get one here.
+A Note on API Keys
+When you generate an API key pair at the URLs above, your API Key Secret will only be shown once - make sure to save this in a secure location, or possibly your ~/.bash_profile.
+
+
 # Twilio Video Quickstart for JavaScript
 
 
